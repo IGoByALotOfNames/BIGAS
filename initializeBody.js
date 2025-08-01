@@ -85,10 +85,10 @@ OBJC={"Head": [2,places[2][0]],
     "RArm2":[1,places[1][1]],
     "RArm3":[2,places[2][1]],
     "LLeg1":[0,places[0][4]],
-    "LLeg2":[1,places[1][4]],
+    "LLeg2":[1,places[1][3]],
     "LLeg3":[2,places[2][4]],
     "RLeg1":[0,places[0][3]],
-    "RLeg2":[1,places[1][3]],
+    "RLeg2":[1,places[1][4]],
     "RLeg3":[2,places[2][3]],
     }
 try{
