@@ -16,19 +16,19 @@ function clearAniBodies(id){
 }
 function spawnAnimationBody(id){
 
-    pos=api.getPosition(myId)
+    pos=api.getPosition(id)
     x=pos[0]
     y=pos[1]
     z=pos[2]
-    setDefaultMob("Draugr Zombie",{"hostilityRadius":0,"attackImpulse":0,"baseWalkingSpeed":0,"baseRunningSpeed":0})
+    api.setDefaultMob("Draugr Zombie",{"hostilityRadius":0,"attackImpulse":0,"baseWalkingSpeed":0,"baseRunningSpeed":0})
     mobid=api.attemptSpawnMob("Draugr Zombie", x, y, z, {})
 	api.scalePlayerMeshNodes(mobid, scales)
     if (!attaCHES[myId]){
         attaCHES[myId]=[]
     }
-    attaCHES[myId].push(mobid)
+    attaCHES[id].push(mobid)
 	
-    api.addFollowingEntityToPlayer(myId, mobid,[0,0,10])
+    api.addFollowingEntityToPlayer(id, mobid,[0,0,10])
 	try{
 		api.setPlayerPose(mobid, "standing")
 	}catch{}
