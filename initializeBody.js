@@ -16,19 +16,19 @@ function clearAniBodies(id){
 }
 function spawnAnimationBody(id){
 
-    pos=api.getPosition(id)
+    pos=api.getPosition(myId)
     x=pos[0]
     y=pos[1]
     z=pos[2]
-    api.setDefaultMob("Draugr Zombie",{"hostilityRadius":0,"attackImpulse":0,"baseWalkingSpeed":0,"baseRunningSpeed":0})
+    setDefaultMob("Draugr Zombie",{"hostilityRadius":0,"attackImpulse":0,"baseWalkingSpeed":0,"baseRunningSpeed":0})
     mobid=api.attemptSpawnMob("Draugr Zombie", x, y, z, {})
 	api.scalePlayerMeshNodes(mobid, scales)
     if (!attaCHES[myId]){
         attaCHES[myId]=[]
     }
-    attaCHES[id].push(mobid)
+    attaCHES[myId].push(mobid)
 	
-    api.addFollowingEntityToPlayer(id, mobid,[0,0,10])
+    api.addFollowingEntityToPlayer(myId, mobid,[0,0,10])
 	try{
 		api.setPlayerPose(mobid, "standing")
 	}catch{}
@@ -85,10 +85,10 @@ OBJC={"Head": [2,places[2][0]],
     "RArm2":[1,places[1][1]],
     "RArm3":[2,places[2][1]],
     "LLeg1":[0,places[0][4]],
-    "LLeg2":[1,places[1][3]],
+    "LLeg2":[1,places[1][4]],
     "LLeg3":[2,places[2][4]],
     "RLeg1":[0,places[0][3]],
-    "RLeg2":[1,places[1][4]],
+    "RLeg2":[1,places[1][3]],
     "RLeg3":[2,places[2][3]],
     }
 try{
